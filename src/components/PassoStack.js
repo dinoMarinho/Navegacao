@@ -13,7 +13,10 @@ export default props => (
             {props.avancar ? 
                 <Button title="Avançar" 
                 onPress={()=> {
-                    props.navigation.navigate(props.avancar)
+                    // Método Navegate (Nao recarrega a mesma página)
+                    // props.navigation.navigate(props.avancar)
+                    // Método Push (É possível recarregar a mesma tela)
+                    props.navigation.push(props.avancar, props.avancarParams)
                 }}/> 
             : false}
         </View>
